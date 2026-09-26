@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jefer — Developer</title>
+  <meta name="description" content="Portofolio Jefer, developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5f6368;
+      --accent: #2563eb;
+      --border: #e5e5e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --card: #171a21;
+        --text: #e8e8e8;
+        --muted: #9aa0a6;
+        --accent: #60a5fa;
+        --border: #262a33;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+    nav { padding: 24px 0; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: "JetBrains Mono", monospace; font-weight: 500; }
+    .logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+    nav a:hover { color: var(--text); }
+
+    header { padding: 72px 0 56px; }
+    .hi { font-family: "JetBrains Mono", monospace; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+    header p { color: var(--muted); font-size: 1.1rem; max-width: 560px; }
+    .btns { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;
+      border: 1px solid var(--border); color: var(--text);
+    }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    section { padding: 40px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.4rem; margin-bottom: 20px; }
+    section > p { color: var(--muted); }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skills li {
+      list-style: none; padding: 6px 12px; border-radius: 999px;
+      background: var(--card); border: 1px solid var(--border);
+      font-family: "JetBrains Mono", monospace; font-size: 0.85rem;
+    }
+
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .project {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;
+    }
+    .project h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .project p { color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
+    .project a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+
+    .contact a { color: var(--accent); }
+    footer { padding: 40px 0; color: var(--muted); font-size: 0.85rem; text-align: center; }
+
+    @media (max-width: 520px) {
+      nav ul { gap: 14px; }
+      header { padding: 48px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo">jefer<span>.is-a.dev</span></div>
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <p class="hi">Halo, saya</p>
+      <h1>Jefer.<br>Saya membangun hal-hal di web.</h1>
+      <!-- GANTI: tulis satu kalimat tentang dirimu -->
+      <p>Developer yang suka belajar teknologi baru dan membuat proyek yang bermanfaat.</p>
+      <div class="btns">
+        <a class="btn primary" href="#proyek">Lihat proyek</a>
+        <!-- GANTI: USERNAME dengan username GitHub kamu -->
+        <a class="btn" href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </header>
+
+    <section id="tentang">
+      <h2>Tentang saya</h2>
+      <!-- GANTI: ceritakan dirimu dengan kata-katamu sendiri -->
+      <p>Tulis di sini sedikit tentang dirimu: apa yang sedang kamu pelajari, bidang yang kamu minati, dan apa yang ingin kamu buat.</p>
+    </section>
+
+    <section>
+      <h2>Keahlian</h2>
+      <!-- GANTI: sesuaikan dengan keahlianmu -->
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <section id="proyek">
+      <h2>Proyek</h2>
+      <div class="projects">
+        <!-- GANTI: isi dengan proyek nyata kamu -->
+        <div class="project">
+          <h3>Nama Proyek 1</h3>
+          <p>Penjelasan singkat tentang proyek ini dan teknologi yang dipakai.</p>
+          <a href="#">Lihat →</a>
+        </div>
+        <div class="project">
+          <h3>Nama Proyek 2</h3>
+          <p>Penjelasan singkat tentang proyek ini dan teknologi yang dipakai.</p>
+          <a href="#">Lihat →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="contact">
+      <h2>Kontak</h2>
+      <!-- GANTI: USERNAME dengan username GitHub kamu -->
+      <p>Mau ngobrol atau kerja sama? Hubungi saya lewat <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+
+    <footer>© 2026 Jefer</footer>
+  </div>
+</body>
+</html>
